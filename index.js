@@ -129,7 +129,21 @@ $(document).ready(function() {
 	SVG stroke anim:
 	dash-array: 473px 
 	946 total
+
+	20% solid - 94 + 473	= 567
+	80%  opac - 379 + 473	= 852
 	
+	12% opac - 56 + 473		= 586
+	88% solid - 360 + 473	= 833
+
+	31% solid - 165 + 473	= 620
+	69% opac - 308 + 473	= 799	
+
+
+
+
+
+
 	24% opac - 113 + 473	= 586
 	76% solid - 360 + 473	= 833
 

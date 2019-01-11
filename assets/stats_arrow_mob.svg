@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350px" height="80px" viewBox="0 0 350 80" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>stats_arrow_mob</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-395.000000, -562.000000)">
+        <g id="stats_arrow_mob" transform="translate(570.000000, 602.000000) rotate(90.000000) translate(-570.000000, -602.000000) translate(530.000000, 427.000000)">
+            <path d="M22,348.491379 L79.5,175 L22,1.50862069 L22,0 L80,0 L80,350 L22,350 L22,348.491379 Z" id="Combined-Shape" fill="#CABFD7"></path>
+            <polygon id="Triangle-2" fill="#BFD2E6" points="58 175 1.28785871e-14 350 0 0"></polygon>
+        </g>
+    </g>
+</svg>

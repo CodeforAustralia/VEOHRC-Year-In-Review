@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Roboto:400,700|Ramaraja');
 
 @import "./node_modules/foundation-sites/scss/foundation";
 //@include foundation-everything;
@@ -90,7 +90,7 @@
 .bg_grey{ background-color: $v_bg_grey; }
 .bg_white{ background-color: $white; }
 .bg_grey_noise{ 
-  background: url("../assets/yir_bg_noise.png") repeat $v_bg_grey; 
+  background: url("../assets/yir_bg_noise.png") repeat $v_bg_grey fixed; 
 }
 
 .c_orange{ color: $v_orange; }
@@ -128,6 +128,107 @@
 .hr_white{ border-bottom-color: $white; }
 
 
+$ltVal : 15%;
+a:hover{
+  transition: color .5s;
+}
+a.c_orange{
+  color: $v_orange; 
+  &:hover{
+    color: scale-color($v_orange, $lightness: $ltVal);
+  }
+}
+a.c_brown{
+  color: $v_brown; 
+  &:hover{
+    color: scale-color($v_brown, $lightness: $ltVal);
+  }
+}
+a.c_green_lt{
+  color: $v_green_lt; 
+  &:hover{
+    color: scale-color($v_green_lt, $lightness: $ltVal);
+  }
+}
+a.c_green{
+  color: $v_green; 
+  &:hover{
+    color: scale-color($v_green, $lightness: $ltVal);
+  }
+}
+a.c_green_dk{
+  color: $v_green_dk; 
+  &:hover{
+    color: scale-color($v_green_dk, $lightness: $ltVal);
+  }
+}
+a.c_purple_lt{
+  color: $v_purple_lt; 
+  &:hover{
+    color: scale-color($v_purple_lt, $lightness: $ltVal);
+  }
+}
+a.c_purple{
+  color: $v_purple; 
+  &:hover{
+    color: scale-color($v_purple, $lightness: $ltVal);
+  }
+}
+a.c_purple_dk{
+  color: $v_purple_dk; 
+  &:hover{
+    color: scale-color($v_purple_dk, $lightness: $ltVal);
+  }
+}
+a.c_blue_lt{
+  color: $v_blue_lt; 
+  &:hover{
+    color: scale-color($v_blue_lt, $lightness: $ltVal);
+  }
+}
+a.c_blue{
+  color: $v_blue; 
+  &:hover{
+    color: scale-color($v_blue, $lightness: $ltVal);
+  }
+}
+a.c_blue_dk{
+  color: $v_blue_dk; 
+  &:hover{
+    color: scale-color($v_blue_dk, $lightness: $ltVal);
+  }
+}
+a.c_pink_lt{
+  color: $v_pink_lt; 
+  &:hover{
+    color: scale-color($v_pink_lt, $lightness: $ltVal);
+  }
+}
+a.c_pink{
+  color: $v_pink; 
+  &:hover{
+    color: scale-color($v_pink, $lightness: $ltVal);
+  }
+}
+a.c_pink_dk{
+  color: $v_pink_dk; 
+  &:hover{
+    color: scale-color($v_pink_dk, $lightness: $ltVal);
+  }
+}
+a.c_bg_grey{
+  color: $v_bg_grey; 
+  &:hover{
+    color: scale-color($v_bg_grey, $lightness: $ltVal);
+  }
+}
+a.c_white{
+  color: $white; 
+  &:hover{
+    color: scale-color($white, $lightness: $ltVal);
+  }
+}
+
 .vh_100{
   height: 100vh;
 }
@@ -144,6 +245,11 @@
     font-size: rem-calc(24);
     line-height: rem-calc(48);
   }
+}
+
+.header_bg{
+  background: url("../assets/header_bg.svg") repeat fixed $v_orange;  
+  background-size: 50px auto;
 }
 
 .priority{
@@ -210,7 +316,9 @@
     }
   }
   &.purple{
+    background: fixed;
     background-color: $v_purple_lt;
+    background-image: url(../assets/curtain.svg);
     color: $v_purple_dk;
     a{
       color: $v_purple;
@@ -223,7 +331,9 @@
     }
   }
   &.green{
+    background: fixed;
     background-color: $v_green_lt;
+    background-image: url(../assets/hexagons.svg);
     color: $v_green_dk;
     a{
       color: $v_green;
@@ -236,7 +346,10 @@
     }
   }
   &.blue{
+    background: fixed;
     background-color: $v_blue_lt;
+    background-image: url(../assets/autumn.svg);
+    background-size: 50px auto;
     color: $v_blue_dk;
     a{
       color: $v_blue;
@@ -249,7 +362,10 @@
     }
   }
   &.pink{
+    background: fixed;
     background-color: $v_pink_lt;
+    background-image: url(../assets/moroccan.svg);
+    background-size: 50px auto;
     color: $v_pink_dk;
     a{
       color: $v_pink;
@@ -268,12 +384,16 @@
 
 }
 
+
+
 .racism_stats{
+  background-attachment: fixed;
+  background-image: url(../assets/endless-clouds.svg);
   .crescent_stat{
     position: relative;
     .stat_txt.large{
       font-size: rem-calc(72);
-      line-height: 3;
+      line-height: 3.5;
       display: block;
       position: absolute;
       top: -15px;
@@ -283,9 +403,16 @@
         stroke-dasharray: 473px;
         transition: stroke-dashoffset 1s ease-out;
     }
+    .arc_solid{
+      @include mui-animation(fade(0.7,1));
+      animation-duration: .5s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
     .crescent_race{
       .arc_opac{
-        stroke-dashoffset: 586px;
+        stroke-dashoffset: 532px;
+        animation-delay: 0s;
       }
       .arc_solid{
         stroke-dashoffset: 946px;
@@ -294,9 +421,19 @@
     .crescent_relig{
       .arc_solid{
         stroke-dashoffset: 946px;
+        animation-delay: 0.2s;
       }
       .arc_opac{
-        stroke-dashoffset: 781px;
+        stroke-dashoffset: 799px;
+      }
+    }
+    .crescent_sh{
+      .arc_solid{
+        stroke-dashoffset: 946px;
+        animation-delay: 0.4s;
+      }
+      .arc_opac{
+        stroke-dashoffset: 852px;
       }
     }
     &.mui-enter{
@@ -307,7 +444,7 @@
     &.mui-enter-active{
       .crescent_race{
         .arc_opac{
-          stroke-dashoffset: 586px;
+          stroke-dashoffset: 532px;
         }
         .arc_solid{
           stroke-dashoffset: 946px;
@@ -318,7 +455,15 @@
           stroke-dashoffset: 946px;
         }
         .arc_opac{
-          stroke-dashoffset: 781px;
+          stroke-dashoffset: 799px;
+        }
+      }
+      .crescent_sh{
+        .arc_solid{
+          stroke-dashoffset: 946px;
+        }
+        .arc_opac{
+          stroke-dashoffset: 852px;
         }
       }
     }
@@ -392,8 +537,9 @@
 }
 
 .stat_txt{
-  font-weight: bold;
-
+  font-weight: normal;
+  font-family: $body-font-family-numbers;
+  line-height: 1.2;
   &.s144{
     font-size: rem-calc(72);
   }
@@ -452,7 +598,16 @@
     }
   }
 }
-
+.bg_stat_arrow_fit {
+  background-size: 101% 100%;
+  background-position: center center;
+  background-image: url(../assets/stats_arrow_mob.svg);
+  min-height: 100px;
+  @include breakpoint(medium up) {
+    background-image: url(../assets/stats_arrow.svg);
+    min-height: auto;
+  }
+}
 
 .key_stats{
   &.purple{
@@ -477,6 +632,9 @@
     color: $v_blue_dk;
     .stat_txt{
       color: $v_blue;
+      &.c_purple{
+        color: $v_purple;
+      }
     }
     hr{
       border-bottom-color: $v_blue;
@@ -495,6 +653,55 @@
     border-bottom: 2px solid #333;
   }
 
+  .stats_holder{
+    position: relative;
+    width: 170px;
+    height: auto;
+    margin: 0 auto;
+    padding-top:50px;
+    &.mui-enter{
+      .stats_arc_1,
+      .stats_arc_2,
+      .stats_arc_3{
+        stroke-dashoffset: 373px;
+        transition: stroke-dashoffset 2s;
+      }
+    }
+    .stats_arc, &.mui-enter.mui-enter-active .stats_arc{
+      position: absolute;
+      left: 0;
+      top: 0;
+      &_1{
+        stroke-dasharray: 373px;
+        stroke-dashoffset: 373 - (64 * 3.73) + px;
+      }
+      &_2{
+        stroke-dasharray: 373px;
+        stroke-dashoffset: 373 - (98 * 3.73) + px;
+      }
+      &_3{
+        stroke-dasharray: 373px;
+        stroke-dashoffset: 373 - (76 * 3.73) + px;
+      }
+    }
+
+  }
+
+  // &.mui-enter{
+  //     .arc_opac, .arc_solid{
+  //       stroke-dashoffset: 373px;
+  //     }
+  //   }
+  //   &.mui-enter-active{
+  //     .crescent_race{
+  //       .arc_opac{
+  //         stroke-dashoffset: 532px;
+  //       }
+  //       .arc_solid{
+  //         stroke-dashoffset: 946px;
+  //       }
+  //     }
+  //   }
 
   .bargraph{
     $bar_height: 30px;
@@ -533,21 +740,27 @@
       .bar{
         width: 100%;
         height: $bar_height;
-        background-color: $v_blue_lt;
+        background-color: $v_blue;
         position: relative;
         transition: opacity .5s;
         .increase{
-          background-color: $v_blue;
+          background: url("../assets/blue_stripe_bg.svg") repeat;
+          background-size: 5px auto;
           width: 10%;
           height: $bar_height;
           position: absolute;
           right: 0px;
+          opacity: 0.7;
         }
       }
     }
   }
 }
 
+.organisation{
+    background-image: url(../assets/endless-clouds.svg);
+    background-attachment: fixed;
+}
 
 
 /*******************************************
@@ -580,6 +793,10 @@
 .zoom-in{
   @include mui-zoom(in, $fade: true, $from: 0.9, $to: 1);
 
+}
+
+.fade-arrow-down{
+  @include mui-animation(slide($direction: up, $amount: 10%));
 }
 
 .hr-grow{
